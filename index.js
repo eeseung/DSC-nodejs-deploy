@@ -13,6 +13,7 @@ const { sequelize } = require('./models');
 const pageRouter = require('./routes/page');
 
 const app = express();
+app.use(cors());
 sequelize.sync();
 
 app.set('port', process.env.PORT || 3065)
